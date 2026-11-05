@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pack Bulletin, Howl direction A." />
+    <title>Howl · A · Pack Bulletin</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body class="direction-page direction-a">
+    <div class="app-shell">
+      <aside class="left-rail" aria-label="Main navigation">
+        <a class="wordmark" href="./">Howl</a>
+        <nav class="primary-nav">
+          <a class="nav-link is-current" href="#feed" aria-current="page">Home</a>
+          <a class="nav-link" href="#about">About</a>
+        </nav>
+        <button class="write-button" type="button" data-open-compose>Write a post</button>
+      </aside>
+
+      <main class="feed-column" id="feed">
+        <header class="feed-header">
+          <div>
+            <h1>A · Pack Bulletin</h1>
+          </div>
+          <button class="mobile-write" type="button" data-open-compose aria-label="Write a post">Write</button>
+        </header>
+        <div class="feed-tabs" aria-label="Feed">
+          <span class="active-tab">For you</span>
+          <span>Following</span>
+        </div>
+        <ol class="post-list" data-post-list aria-label="Campus posts"></ol>
+      </main>
+
+      <aside class="right-rail" id="about">
+        <h2>Places mentioned</h2>
+        <p>The Brickyard · Hunt Library · Talley · Carter-Finley</p>
+      </aside>
+    </div>
+
+    <dialog class="compose-dialog" aria-labelledby="compose-title">
+      <form method="dialog" class="compose-form" data-compose-form>
+        <div class="dialog-heading">
+          <h2 id="compose-title">Write a post</h2>
+          <button class="dialog-close" type="button" data-close-compose aria-label="Close">Close</button>
+        </div>
+        <label class="sr-only" for="compose-text">Your post</label>
+        <textarea id="compose-text" name="post" maxlength="500" required placeholder="What's happening on campus?"></textarea>
+        <button class="write-button" type="submit">Post</button>
+      </form>
+    </dialog>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#feed" aria-current="page">Howl</a>
+      <button type="button" data-open-compose>Write</button>
+    </nav>
+  </body>
+</html>
